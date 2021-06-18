@@ -239,6 +239,8 @@
                 results = results.reduce(function (a, c) {
                     if (c.ok) {
                         return a.concat(c.value);
+                    } else {
+                        console.error(c.reason);
                     }
                     return a;
                 }, []);

@@ -90,7 +90,7 @@ class AnimeApi extends Generic {
       };
 
       if (anime.type === 'show') {
-        result = Object.extend(result, { episodes: anime.episodes });
+        result.episodes = anime.episodes;
       }
 
       return sanitize(result);

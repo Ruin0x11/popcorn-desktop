@@ -554,5 +554,18 @@
 	"Allows connecting to peers that use PE/MSE. Will in most cases increase the number of connectable peers but might also result in increased CPU usage": "Allows connecting to peers that use PE/MSE. Will in most cases increase the number of connectable peers but might also result in increased CPU usage",
 	"Show the Seedbox when adding a new download": "Show the Seedbox when adding a new download",
 	"Download added": "Download added",
-	"Change API Server": "Change API Server"
+	"Change API Server": "Change API Server",
+	"The remote movies API failed to respond, please check %s and try again later": "The remote movies API failed to respond, please check %s and try again later",
+	"100%": "100%",
+	"113%": "113%",
+	"125%": "125%",
+	"138%": "138%",
+	"150%": "150%",
+	"163%": "163%",
+	"175%": "175%",
+	"188%": "188%",
+	"200%": "200%",
+	"25% - 400%": "25% - 400%",
+	"The remote anime API failed to respond, please check %s and try again later": "The remote anime API failed to respond, please check %s and try again later",
+	"Current": "Current"
 }

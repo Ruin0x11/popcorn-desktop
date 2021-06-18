@@ -2,8 +2,8 @@
     'use strict';
 
     var AnimeCollection = App.Model.Collection.extend({
-        model: App.Model.Movie,
-        popid: 'mal_id',
+        model: App.Model.Anime,
+        popid: '_id',
         type: 'animes',
         getProviders: function () {
             return {
