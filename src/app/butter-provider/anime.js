@@ -91,7 +91,7 @@ class AnimeApi extends Generic {
 
       if (anime.type === 'show') {
         result.episodes = anime.episodes;
-        result.num_seasons = anime.num_seaons;
+        result.num_seasons = anime.num_seasons;
       } else { // 'movie'
         result.torrents =
             anime.torrents['en'] !== null
