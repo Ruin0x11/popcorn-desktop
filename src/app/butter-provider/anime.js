@@ -39,8 +39,8 @@ class AnimeApi extends Generic {
         return {
           images: {
             poster: 'https://media.kitsu.io/anime/poster_images/' + anime._id + '/large.jpg',
-            banner: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/original.jpg',
-            fanart: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/original.jpg',
+            banner: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/large.jpg',
+            fanart: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/large.jpg',
           },
           mal_id: anime._id,
           haru_id: anime._id,
@@ -78,12 +78,12 @@ class AnimeApi extends Generic {
         runtime: anime.runtime,
         status: anime.status,
         synopsis: anime.synopsis,
-        network: [], //FIXME
+        network: anime.network,
         rating: anime.rating,
         images: {
           poster: 'https://media.kitsu.io/anime/poster_images/' + anime._id + '/large.jpg',
-          banner: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/original.jpg',
-          fanart: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/original.jpg',
+          banner: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/large.jpg',
+          fanart: 'https://media.kitsu.io/anime/cover_images/' + anime._id + '/large.jpg',
         },
         year: anime.year,
         type: anime.type
@@ -91,6 +91,12 @@ class AnimeApi extends Generic {
 
       if (anime.type === 'show') {
         result.episodes = anime.episodes;
+        result.num_seasons = anime.num_seaons;
+      } else { // 'movie'
+        result.torrents =
+            anime.torrents['en'] !== null
+              ? anime.torrents['en']
+              : anime.torrents[Object.keys(anime.torrents)[0]];
       }
 
       return sanitize(result);
